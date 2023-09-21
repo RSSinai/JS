@@ -59,19 +59,19 @@ let maryAvg = (maryFirst +marySecond+maryThird)/3;
 
 1,2 ,1,3 ,2,3
 
-if( mikeAvg > johnAvg)
+if (johnAvg > mikeAvg && johnAvg > maryAvg)
 {
-    if( mikeAvg > maryAvg)
-    {
-        console.log('mike is the winner')
-    }
-    else if (johnAvg > maryAvg)
-    {
-        console.log('john is the winner')
-    }
-    else
-    {
-        console.log('mary is the winner')
-    }
-
+    console.log('john is is the winner')
+}
+else if (maryAvg > johnAvg && maryAvg > mikeAvg)
+{
+    console.log('mary is the winner')
+}
+else if (mikeAvg > maryAvg && mikeAvg > johnAvgAvg)
+{
+    console.log('mike is the winner')
+}
+else
+{
+    console.log('its a draw between contestants')
 }
