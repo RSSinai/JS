@@ -370,4 +370,4 @@ function isogram(string) {
 }
 
 /* --------------------------------- DRIVER --------------------------------- */
-console.log(isogram("a"))
+console.log(isogram("hello"))
