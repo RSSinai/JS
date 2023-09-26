@@ -92,14 +92,24 @@ console.log(findNextSqrt(114))
 /* -------------------------------------------------------------------------- */
 
 function findUniq(arr) {
-   arr.sort();
+   let array = arr
+    array = array.sort();
 
-   if (arr[0] !== arr[1]) {
-     return arr[0];
+   if (array[0] !== arr[1]) {
+     return array[0];
   } else {
-     return arr[arr.length - 1];
+     return array[array.length - 1];
   }
 }
+/* --------------------------------- DRIVER --------------------------------- */
+console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]))
+console.log(findUniq([ 0, 0, 0.55, 0, 0 ]))
+
+
+
+
+
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -107,8 +117,9 @@ function findUniq(arr) {
 /* -------------------------------------------------------------------------- */
 
 function summ(num) {
-  arr = [];
-  for (let i = 0; i < num; i++) {
+    let number = num
+  let arr = [];
+  for (let i = 0; i < number; i++) {
     arr[i] = i + 1;
   }
   console.log(arr);
@@ -119,9 +130,14 @@ function summ(num) {
   for (let i = start; i < end; i++) {
     sum += arr[i];
   }
-  return console.log(sum);
+  return sum;
 }
-summ(2);
+
+
+/* --------------------------------- DRIVER --------------------------------- */
+console.log(summ(2))
+console.log(summ(8))
+
 
 /* -------------------------------------------------------------------------- */
 /*                                     2.6                                    */
@@ -245,16 +261,20 @@ console.log(repeatStr(4, "hello"))
 /*                                     5.3                                    */
 /* -------------------------------------------------------------------------- */
 
-// Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+// Complete the method/function so that it converts dash/underscore delimited words into camel casing.
+// The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
 
 function convert(string) {
   let str = string.replaceAll("-", " ").split(" ");
   for (let i = 0; i < str.length; i++) {
-    str[i] = str[i].charAt(0).toUpperCase();
-    console.log(rest);
+    str[i] = str[i].charAt(0).toUpperCase() ;
+    
   }
+  return str + str
 }
 
+/* --------------------------------- DRIVER --------------------------------- */
+console.log(convert("rony is kugn"))
 /* -------------------------------------------------------------------------- */
 /*                                     5.5                                    */
 /* -------------------------------------------------------------------------- */
@@ -350,4 +370,4 @@ function isogram(string) {
 }
 
 /* --------------------------------- DRIVER --------------------------------- */
-console.log(isogram("helo"))
+console.log(isogram("a"))
