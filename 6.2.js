@@ -1,8 +1,6 @@
 const people = ["Greg", "Mary", "Devon", "James"];
-let copy1 = people.slice(0)
-let copy2 = people.slice(0)
-let copy3 = people.slice(0)
-let copy4 = people.slice(0)
+let copy1 = copy2 = copy3 = copy4 = people.slice(0)
+
 /* -------------------------------------------------------------------------- */
 /*                                      1                                     */
 /* -------------------------------------------------------------------------- */
