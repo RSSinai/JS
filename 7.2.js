@@ -1,7 +1,7 @@
 
 function repeating(string)
 {
-    let i=0;
+    let i;
     while ((i = string.indexOf("you", i)) != -1)
     {
         // Print out the index.
