@@ -6,13 +6,13 @@
 /* -------------------------------------------------------------------------- */
 /*                                      1                                     */
 /* -------------------------------------------------------------------------- */
-function isString(string, callback) {
-  if (string === "string") {
-    callback();
-  } else {
-    console.log("not a string");
-  }
-}
+// function isString(string, callback) {
+//   if (string === "string") {
+//     callback();
+//   } else {
+//     console.log("not a string");
+//   }
+// }
 
 function isString(string, callback) {
   if (typeof string === "string") {
