@@ -178,25 +178,57 @@ function filterCustomer(str) {
 // // Calculate the total value of all cars owned by a specific customer
 // function getCustomerTotalCarValue(customerId) {
 //     const customer = carMarket.customers.find((customer) => customer.id === customerId);
-  
+
 //     if (customer) {
 //       const totalCarValue = customer.cars.reduce((accumulator, car) => {
 //         return accumulator + car.price;
 //       }, 0);
-  
+
 //       return totalCarValue;
 //     }
-  
+
 //     return console.log('Customer not found');
 //   }
-  
+
 // /* --------------------------------- DRIVER --------------------------------- */
 // console.log(  getCustomerTotalCarValue("2RprZ1dbL"))
-
 
 /* -------------------------------------------------------------------------- */
 /*                               Car Operations:                              */
 /* -------------------------------------------------------------------------- */
 // Retrieve all cars available for purchase. - by who ?
+// function retrieve() {
+//   console.log("these are all the cars to buy from customers to buy ");
+//   console.log(
+//     carMarket.customers.map((customer) => {
+//       return customer.cars;
+//     })
+//   );
+//   console.log("these are all the cars to buy from sellers");
 
-console.log(carMarket.customers.map((customer)=>{customer.cars}))
+  let sellerCars = carMarket.sellers.map((seller) => {
+    return seller.cars;
+  });
+
+//   sellerCars.forEach((car) => {
+//     car.forEach((model) => {
+//       console.log(model.models);
+//     });
+//   });
+// }
+
+// /* --------------------------------- DRIVER --------------------------------- */
+// retrieve();
+
+// Search for cars based on certain criteria. The search parameters should include the production year, price, and optionally, the brand of the car.
+// searchForCar(year, price, brand);
+// {
+
+// }
+carArr = sellerCars.forEach((car) => {
+    car.forEach((model) => {
+      return model.models;
+    });
+  });
+
+  console.log(carArr)
