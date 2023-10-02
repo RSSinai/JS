@@ -109,7 +109,7 @@ function updateCarPrice(agency, newPrice, carNumber, ownerId)
 }
 
 // /* --------------------------------- DRIVER --------------------------------- */
-updateCarPrice(agency, newPrice, carNumber, ownerId)
+// updateCarPrice(agency, newPrice, carNumber, ownerId)
 
 // // Transfer a car from one agency to another
 function transferCarBetweenAgencies(oldAgency, newAgency, carNumber)
@@ -175,7 +175,7 @@ function changeCustomerCash(customerNames, customerIds, cashChange) {
   } else console.log(`Customer with id ${customerIds} not found.`);
 }
 /* --------------------------------- DRIVER --------------------------------- */
-changeCustomerCash(customerNames, customerIds, cashChange)
+// changeCustomerCash(customerNames, customerIds, cashChange)
 
 // // Calculate the total value of all cars owned by a specific customer
 function getCustomerTotalCarValue(customerId) {
@@ -245,15 +245,21 @@ searchCar(165041);
 /*                          Car Purchase Operations:                          */
 /* -------------------------------------------------------------------------- */
 
-function sellCar(agencyId, carNumber) {
-  const agency = carMarket.sellers.find((ele) => ele.agencyId === agencyId);
-  const carss = carMarket.sellers.find((model) =>
-    model.cars.find((elem) =>
-      elem.models.find((ele) => ele.carNumber === carNumber)
-    )
-  );
+function sellCar(text) {
+    let specificCar = carMarket.sellers.map((ele)=>ele.cars.map((ele)=>ele.models.filter((ele)=>ele.name)))
+    console.log("-----------------++---------------------------------------------------") 
+    const filteredCars = specificCar.filter((car) => {
+        console.log("Checking car brand:", car.brand);
+      
+        const matchingModels = car.filter((model) => {
+          console.log("Checking car model carNumber:", specificCar.carNumber);
+          return specificCar.carNumber === text;
+        });
+      
+        return matchingModels.length > 0;
+      });
+      console.log("Filtered Cars:", filteredCars);
 
-  console.log(carss);
 }
 
-console.log(sellCar("Plyq5M5AZ", "AZJZ4"));
+console.log(sellCar("S6DL1"));
