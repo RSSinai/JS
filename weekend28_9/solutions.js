@@ -93,20 +93,20 @@ console.log('-----------')
 console.log(filterAgency("Best Deal"))
 
 // // Update the price of a specific car in an agency
-function updateCarPrice(agency, newPrice, carNumber, ownerId)
-{
-    const seller = carMarket.sellers.find((seller) => seller.agencyName === agency);
-    let specificModel = seller.cars.find(car == seller.cars.find((car)=>{car.models.find(((model)=>{model.carNumber == carNumber && model.ownerId == ownerId}))}) )
+// function updateCarPrice(agency, newPrice, carNumber, ownerId)
+// {
+//     const seller = carMarket.sellers.find((seller) => seller.agencyName === agency);
+//     let specificModel = seller.cars.find(car == seller.cars.find((car)=>{car.models.find(((model)=>{model.carNumber == carNumber && model.ownerId == ownerId}))}) )
 
-    if(specificModel != null)
-    {
-        specificModel.models.find((model)=>{model.price}) = newPrice
-        console.log(`Successfully changed a ${seller.agencyName} car to be at the price ${newPrice}`);
-    }
-    else {
-        console.log(`Seller with  ${ownerId} not found and changed.`);
-      }
-}
+//     if(specificModel != null)
+//     {
+//         specificModel.models.find((model)=>{model.price}) = newPrice
+//         console.log(`Successfully changed a ${seller.agencyName} car to be at the price ${newPrice}`);
+//     }
+//     else {
+//         console.log(`Seller with  ${ownerId} not found and changed.`);
+//       }
+// }
 
 // /* --------------------------------- DRIVER --------------------------------- */
 // updateCarPrice(agency, newPrice, carNumber, ownerId)
@@ -244,22 +244,25 @@ searchCar(165041);
 /* -------------------------------------------------------------------------- */
 /*                          Car Purchase Operations:                          */
 /* -------------------------------------------------------------------------- */
+function sellCar(wantedAgency,wantedBrand, wantedCarNumber) {
 
-function sellCar(text) {
-    let specificCar = carMarket.sellers.map((ele)=>ele.cars.map((ele)=>ele.models.filter((ele)=>ele.name)))
-    console.log("-----------------++---------------------------------------------------") 
-    const filteredCars = specificCar.filter((car) => {
-        console.log("Checking car brand:", car.brand);
-      
-        const matchingModels = car.filter((model) => {
-          console.log("Checking car model carNumber:", specificCar.carNumber);
-          return specificCar.carNumber === text;
-        });
-      
-        return matchingModels.length > 0;
-      });
-      console.log("Filtered Cars:", filteredCars);
+    
+    const carInAgency = carMarket.sellers.find((ele)=>ele.agencyName === wantedAgency)
+    console.log(carInAgency)
+    /* ------------------------------------ - ----------------------------------- */
+    const brandInAgency = carInAgency.cars.find((car)=>car.brand === wantedBrand)
+    console.log(brandInAgency)
+    /* ------------------------------------ - ----------------------------------- */
+    const carNumberInAgency = brandInAgency.models.find((ele)=>ele.carNumber === wantedCarNumber)
+    if(carNumberInAgency != null)
+    {
+      console.log("the wanted car was found")
+    }
+    else
+    {
+      console.log("the specific car was found")
+    }
+  }
 
-}
 
-console.log(sellCar("S6DL1"));
+console.log(sellCar("CarMax", "bmw", "kAnv-"));
