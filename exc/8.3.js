@@ -31,9 +31,9 @@ let bookUtils = {
         return book.publisher = {name, location}
     },
     isSamePublisher: function(book1,book2){
-        if(book1.publisher === book2.publisher )
+        if(book1.publisher.name === book2.publisher.name )
         {
-            return console.log("same ids")
+            console.log("same ids")
         }
     }
         
@@ -49,7 +49,7 @@ bookUtils.setPublisher(book1,"io","greece")
 bookUtils.setPublisher(book2,"io","greece")
 console.log(book1)
 console.log(book2)
-bookUtils.isSamePublisher()
+bookUtils.isSamePublisher(book1,book2)
 
 
 
