@@ -7,7 +7,6 @@ obj = {
 
 function swap(obj)
 {
-    console.log(obj.entries()
-    )}
+    console.log(obj.entries())}
 
     swap(obj)

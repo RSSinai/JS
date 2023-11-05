@@ -48,5 +48,3 @@ function getNames(){
 
 
  data.forEach((ele)=>{ele.birthday.split("-")}) 
-
- console.log(data.forEach((ele)=>{console.log(ele.birthday)}))
