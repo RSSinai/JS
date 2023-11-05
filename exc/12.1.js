@@ -3,12 +3,7 @@
 // reading status is true).
 // Log the book name, author name, and reading status.
 
-function receives(obj) {
-    console.log(Object.keys(obj))
-}
-
-let library = []
- library = [
+const library = [
   {
     author: "Bill Gates",
     title: "The Road Ahead",
@@ -25,4 +20,10 @@ let library = []
     readingStatus: false,
   },
 ];
-console.log(receives(library))
+
+function receives() {
+  const readable = [];
+  library.forEach((ele)=>{ if(ele.readingStatus === true){readable.push(ele)}})
+  return readable
+}
+console.log(receives())
