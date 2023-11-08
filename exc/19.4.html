@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1 id="title">Welcome to My Web Page</h1>
+    <p>Click <button id="changeColor">here</button> to change the text color.</p>
+
+    <script>
+        document.getElementById('changeColor').addEventListener('click', function() {
+            document.getElementById('title').style.color = 'red';
+        });
+    </script>
+</body>
+</html>
