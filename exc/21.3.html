@@ -1,0 +1,37 @@
+<!-- // Create a webpage that has part of the application
+// process for a job. This page should have a text area
+// field and a button. Your user must enter at least 100
+// characters before clicking the button. If he didn’t, please
+// give him the appropriate message. (using alert is
+// forbidden)
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>Why are you interested in the position?</p>
+      <textarea rows="5" cols="30" id="textArea"></textarea>
+      <button onclick="validate()">Click here!</button>
+      <p id="information"></p>
+    </div>
+    <script>
+      function validate() {
+        let text = document.getElementById("textArea").value;
+        console.log(text.length);
+        if(text.length<100)
+        {
+            document.querySelector('#information').innerHTML = 'you must enter at least 100 char'
+        }
+        else
+        {
+            document.querySelector('#information').innerHTML = 'great work'
+        }
+      }
+    </script>
+  </body>
+</html>
