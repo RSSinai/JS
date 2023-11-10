@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Size Manipulation</title>
+  </head>
+  <body>
+    <p id="text">This is some text.</p>
+    <button onclick="increaseFontSize()">+</button>
+    <button onclick="decreaseFontSize()">-</button>
+
+    <script>
+      let textOnPage = document.getElementById("text");
+
+      function increaseFontSize() {
+        let currentFontSize = parseInt(
+          window.getComputedStyle(textOnPage).fontSize
+        );
+        console.log(currentFontSize);
+        let newSize = currentFontSize + 2;
+        if (newSize <= 100) {
+          textOnPage.style.fontSize = newSize + "px";
+        }
+      }
+      function decreaseFontSize() {
+        let currentFontSize = parseInt(
+          window.getComputedStyle(textOnPage).fontSize
+        );
+        console.log(currentFontSize);
+        let newSize = currentFontSize - 2;
+        if (newSize >= 6) {
+          textOnPage.style.fontSize = newSize + "px";
+        }
+      }
+    </script>
+  </body>
+</html>
