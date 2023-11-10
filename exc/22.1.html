@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="fname">Name:</label><br />
+    <input type="text" id="name" /><br />
+    <label for="lname">Age:</label><br />
+    <input type="text" id="age" /><br />
+    <label for="lname">Email Address:</label><br />
+    <input type="text" id="email" /><br />
+    <input type="submit" onclick="newWindow()" />
+
+    <script>
+      function newWindow() {
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let email = document.getElementById("email").value;
+        let message = "Name: " + name + "\nAge: " + age + "\nEmail: " + email;
+        let confirmation = window.confirm(message);
+        if (confirmation) {
+          alert("Congratulations! You successfully sent this form.");
+        }
+      }
+    </script>
+  </body>
+</html>
