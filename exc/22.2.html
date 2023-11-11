@@ -1,29 +1,39 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <input type="checkbox" id="input" onchange="toggle()" />
-    <div id="image">
-      <img
-        src="https://images1.ynet.co.il/PicServer2/24012010/3209371/avi_hh.jpg"
-      />
-    </div>
-    <script>
-      function toggle()
-      {
-        let image = document.getElementById("image");
-        let checkbox = document.getElementById("input");
-
-        if (checkbox.checked===false) {
-          image.style.display = "none";
-        } else {
-          image.style.display = "block";
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Photo</title>
+    <style>
+        #photo {
+            display: none; /* Initially hide the photo */
         }
-      }
+    </style>
+</head>
+<body>
+
+    <label for="showPhoto">Show Photo</label>
+    <input type="checkbox" id="showPhoto" onchange="togglePhotoVisibility()">
+    
+    <div id="photo">
+        <img src="https://images1.ynet.co.il/PicServer2/24012010/3209371/avi_hh.jpg" alt="Your Photo">
+    </div>
+
+    <script>
+        function togglePhotoVisibility() {
+            var photo = document.getElementById("photo");
+            var checkbox = document.getElementById("showPhoto");
+
+            // If checkbox is checked, display the photo; otherwise, hide it
+            if (checkbox.checked) {
+                photo.style.display = "block";
+            } else {
+                photo.style.display = "none";
+            }
+        }
     </script>
-  </body>
+
+</body>
 </html>

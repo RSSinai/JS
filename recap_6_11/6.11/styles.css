@@ -1,0 +1,27 @@
+.main-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #9baddd;
+    width: calc(100% - 30px);
+}
+.left-container
+{
+    width: 30%;
+    height: 400px;
+    background-color: white;
+    
+}
+.right-container
+{
+    width: 30%;
+    height: 400px;
+    background-color: #4439c3;
+}
+form
+{
+    width: 100%;
+}
