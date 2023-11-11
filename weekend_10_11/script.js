@@ -166,12 +166,15 @@ function buyFlight(id, from, to, price) {
       "Congratulations! You've successfully baught this flight ticket. to view this go to cart page "
     );
     cart.push({ id, from, to, price });
-    console.log(cart);
+    localStorage.setItem("myCartArray", JSON.stringify(cart));
+        console.log(cart)
   } else {
     return;
   }
 }
 
+
+//print from array to main
 const container = document.getElementById("flight-list");
 flights.forEach((flight) => {
   const card = document.createElement("div");
@@ -186,3 +189,4 @@ flights.forEach((flight) => {
     `;
   container.appendChild(card);
 });
+
